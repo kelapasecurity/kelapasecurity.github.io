@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelapa Security - Your One-Step Cybersecurity Solution</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #080a13; /* A deep, space black */
+        }
+
+        @keyframes digital-rain {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 0 100%;
+            }
+        }
+        
+        /* .hero-bg {
+            background-image: repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(0,255,255,0.1) 1px, rgba(0,255,255,0.1) 3px), repeating-linear-gradient(90deg, transparent, transparent 1px, rgba(57,255,20,0.1) 1px, rgba(57,255,20,0.1) 3px);
+            animation: digital-rain 20s linear infinite;
+        } */
+
+        .text-neon {
+            background-image: linear-gradient(90deg, #39FF14, #00FFFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .border-gradient-green-blue {
+            border-image: linear-gradient(45deg, #39FF14, #00FFFF) 1;
+            border-width: 2px;
+            border-style: solid;
+        }
+        .card-bg {
+            background-color: #1a1a2e;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .card-bg:hover {
+            box-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+        }
+
+        .btn-neon {
+            background-image: linear-gradient(45deg, #39FF14, #00FFFF);
+            transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .btn-neon:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.7), 0 0 25px rgba(57, 255, 20, 0.7);
+        }
+
+        @keyframes flicker {
+            0% { text-shadow: none; }
+            50% { text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14; }
+            100% { text-shadow: none; }
+        }
+
+        .flicker-animation {
+            animation: flicker 2s linear infinite alternate;
+        }
+    </style>
+</head>
+<body class="text-gray-300">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-70 backdrop-blur-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center max-w-7xl">
+            <a href="#" class="text-2xl font-extrabold text-white">Kelapa Security</a>
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold">
+                <a href="#services" class="hover:text-white transition-colors duration-300">Services</a>
+                <a href="#about" class="hover:text-white transition-colors duration-300">About Us</a>
+                <a href="#contact" class="hover:text-white transition-colors duration-300">Contact</a>
+            </nav>
+            <a href="#contact" class="hidden md:block px-6 py-2 btn-neon text-white font-bold rounded-full shadow-lg">
+                Get a Quote
+            </a>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-80 backdrop-blur-sm">
+            <nav class="flex flex-col items-center py-4 space-y-4">
+                <a href="#services" class="text-white hover:text-gray-400 transition-colors duration-300" onclick="hideMenu()">Services</a>
+                <a href="#about" class="text-white hover:text-gray-400 transition-colors duration-300" onclick="hideMenu()">About Us</a>
+                <a href="#contact" class="text-white hover:text-gray-400 transition-colors duration-300" onclick="hideMenu()">Contact</a>
+                <a href="#contact" class="px-6 py-2 btn-neon text-white font-bold rounded-full shadow-lg" onclick="hideMenu()">Get a Quote</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center justify-center text-center px-4 py-12 relative overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-20" style="background-image: url('https://github.com/frozzipies/frozzipies.github.io/blob/main/WhatsApp%20Image%202025-09-25%20at%2015.41.02.jpeg?raw=true'); background-size: cover; background-position: center;"></div>
+            <div class="relative z-10 max-w-4xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight flicker-animation">
+                    <span class="text-neon">Kelapa Security</span><br>
+                    Your One-Step Cybersecurity Solution
+                </h1>
+                <p class="mt-6 text-base sm:text-lg text-gray-400 max-w-3xl mx-auto">
+                    We are the premier cybersecurity solution provider in Indonesia and worldwide, protecting your digital assets with a relentless pursuit of excellence. From proactive defense to expert response, we've got you covered.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#services" class="px-8 py-3 text-lg font-bold text-white rounded-full btn-neon">Explore Services</a>
+                    <a href="#contact" class="px-8 py-3 text-lg font-bold text-white rounded-full bg-transparent border-2 border-indigo-500 hover:bg-indigo-500 hover:border-indigo-500 transition-all duration-300">Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section id="about" class="py-20 px-4 bg-gray-950">
+            <div class="container mx-auto max-w-7xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <div class="card-bg rounded-2xl p-8 border-gradient-green-blue">
+                        <h3 class="text-5xl font-extrabold text-neon">+1000</h3>
+                        <p class="mt-2 text-gray-400 font-semibold">Professional Ethical Hackers</p>
+                    </div>
+                    <div class="card-bg rounded-2xl p-8 border-gradient-green-blue">
+                        <h3 class="text-5xl font-extrabold text-neon">+100K</h3>
+                        <p class="mt-2 text-gray-400 font-semibold">Vulnerabilities Patched</p>
+                    </div>
+                    <div class="card-bg rounded-2xl p-8 border-gradient-green-blue">
+                        <h3 class="text-5xl font-extrabold text-neon">Zero Day</h3>
+                        <p class="mt-2 text-gray-400 font-semibold">Exploit Protection</p>
+                    </div>
+                    <div class="card-bg rounded-2xl p-8 border-gradient-green-blue">
+                        <h3 class="text-5xl font-extrabold text-neon">100%</h3>
+                        <p class="mt-2 text-gray-400 font-semibold">Satisfaction Rate</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 px-4">
+            <div class="container mx-auto max-w-7xl">
+                <h2 class="text-4xl font-extrabold text-center text-white">Our Core Services</h2>
+                <p class="text-center text-gray-400 mt-4 max-w-2xl mx-auto">
+                    We offer a comprehensive suite of cybersecurity services designed to defend against modern threats and secure your digital future.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+                    <!-- Service 1: Penetration Testing -->
+                    <div class="card-bg rounded-2xl p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
+                        <span class="text-5xl mb-4 text-neon">🕵️‍♂️</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Penetration Testing</h3>
+                        <p class="text-gray-400">
+                            Simulate real-world attacks to identify and fix weaknesses before a malicious actor can exploit them.
+                        </p>
+                    </div>
+                    <!-- Service 2: Security Operation Center -->
+                    <div class="card-bg rounded-2xl p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
+                        <span class="text-5xl mb-4 text-neon">🚨</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Security Operation Center</h3>
+                        <p class="text-gray-400">
+                            Our 24/7/365 SOC provides continuous monitoring and swift incident response to neutralize threats in real-time.
+                        </p>
+                    </div>
+                    <!-- Service 3: Threat Hunting -->
+                    <div class="card-bg rounded-2xl p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
+                        <span class="text-5xl mb-4 text-neon">🎯</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Threat Hunting & Intel</h3>
+                        <p class="text-gray-400">
+                            Proactive threat hunting and intelligence gathering to stay ahead of emerging threats and protect your infrastructure.
+                        </p>
+                    </div>
+                    <!-- Service 4: Vulnerability Management -->
+                    <div class="card-bg rounded-2xl p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
+                        <span class="text-5xl mb-4 text-neon">🛡️</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Vulnerability Management</h3>
+                        <p class="text-gray-400">
+                            From Bug Bounty programs to Responsible Disclosure, we help you manage and remediate vulnerabilities effectively.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section id="contact" class="py-20 px-4">
+            <div class="container mx-auto max-w-4xl text-center card-bg rounded-3xl p-12 border-2 border-indigo-500 shadow-xl">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Ready to Secure Your Future?</h2>
+                <p class="mt-4 text-lg text-gray-400">
+                    Partner with the best to safeguard your digital world. Let's discuss a customized solution for your business.
+                </p>
+                <a href="mailto:contact@kelapa.security" class="mt-8 inline-block px-8 py-4 btn-neon text-white text-lg font-bold rounded-full shadow-lg">
+                    Contact Our Experts
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center text-gray-500 text-sm">
+        <p>&copy; 2024 Kelapa Security. All rights reserved. </p>
+        <p>Your ultimate cybersecurity solution in Indonesia and worldwide.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Hide mobile menu on link click
+        function hideMenu() {
+            mobileMenu.classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
